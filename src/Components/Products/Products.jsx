@@ -63,13 +63,7 @@ const Products = () => {
           <h1 data-aos="fade-up" className="text-3xl font-bold">
             علم دوش های دوکاره
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400 mt-2">
-            علم دوش های برند ویتوس با بهترین متریال و کیفیت ساخته شده و همچنین{" "}
-            <br />
-            <br />
-            با بسته بندی های زیبا که شامل : آچار ، حوله ،بیلبیک رسوب گیر تحویل
-            مشتریان عزیز می گردد
-          </p>
+          <p data-aos="fade-up" className="text-xs text-gray-400 mt-2"></p>
         </div>
         {/* body section  */}
         <div></div>
@@ -99,6 +93,12 @@ const Products = () => {
               </div>
             </div>
           ))}
+        </div>
+        {/* view all button  */}
+        <div className="flex justify-center">
+          <button className="text-center p-4 rounded-md mt-10  hover:bg-secondary bg-primary cursor-pointer text-white py-1  ">
+            مشاهده محصولات
+          </button>
         </div>
       </div>
     </div>
