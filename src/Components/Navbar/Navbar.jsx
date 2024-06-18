@@ -31,22 +31,22 @@ const Menu = [
 const Dropdownlinks = [
   {
     id: 1,
-    name: "web1",
+    name: "شیراز",
     link: "/#",
   },
   {
     id: 2,
-    name: "web2",
+    name: "گیلان",
     link: "/#",
   },
   {
     id: 3,
-    name: "web3",
+    name: "یزد",
     link: "/#",
   },
   {
     id: 4,
-    name: "web4",
+    name: "اصفهان",
     link: "/#",
   },
 ];
@@ -59,13 +59,12 @@ const Navbar = () => {
         <div className="container flex justify-between items-center">
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
-              <img src={Logo} alt="Logo" className="w-10" />
               ویتوس
             </a>
           </div>
           {/* search bar and order button */}
           <div className="flex justify-between items-center gap-4 ">
-            <div className="relative group hidden sm:block">
+            {/* <div className="relative group hidden sm:block">
               <input
                 type="text"
                 placeholder="search "
@@ -74,7 +73,6 @@ const Navbar = () => {
               <IoMdSearch className="text-gary-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3 " />
             </div>
           </div>
-          {/* order button  */}
           <button
             onClick={() => alert("Ordering not available yet")}
             className="bg-gradient-to-r from-primary to-secondary text-white py-1 px-4 rounded-full flex items-center gap-3 group "
@@ -83,8 +81,9 @@ const Navbar = () => {
               Order
             </span>
             <FaCartShopping className="text-white drop-shadow-sm cursor-pointer" />
-          </button>
-          {/* DarkMode switch */}
+          </button> */}
+            {/* DarkMode switch */}
+          </div>
           <div>
             <DarkMode />
           </div>
@@ -107,7 +106,7 @@ const Navbar = () => {
           {/* simple drop down and list  */}
           <li className="group relative cursor-pointer">
             <a href="#" className="flex items-center gap-[2px] py-2">
-              Trending Producting
+              نمایندگی ها{" "}
               <span>
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>

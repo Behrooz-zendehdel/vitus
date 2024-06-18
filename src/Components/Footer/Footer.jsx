@@ -20,19 +20,19 @@ const BannerImg = {
 
 const FooterLinks = [
   {
-    title: "Home",
+    title: "خانه",
     link: "/#",
   },
   {
-    title: "About",
+    title: "محصولات",
     link: "/#about",
   },
   {
-    title: "Contact",
+    title: "درباره ما",
     link: "/#contact",
   },
   {
-    title: "Blog",
+    title: "نمایندگی ها",
     link: "/#blog  ",
   },
 ];
@@ -40,7 +40,7 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <div style={BannerImg}>
-      <div data-aos="zoom-in" className="container  ">
+      <div data-aos="zoom-in" className="container  text-white">
         <div className="grid md:grid-cols-3 pb-40 pt-5 ">
           {/* company details  */}
           <div className="py-8 px-4">
