@@ -40,12 +40,11 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <div style={BannerImg}>
-      <div data-aos="zoom-in" className="container   text-white ">
-        <div className="grid md:grid-cols-3 lg:grid-cols-4  pb-40 pt-5">
+      <div data-aos="zoom-in" className="container  ">
+        <div className="grid md:grid-cols-3 pb-40 pt-5 ">
           {/* company details  */}
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={Logo} alt="" className="max-w-[50px]" />
               ویتوس
             </h1>
             <p>
