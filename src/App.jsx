@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-white dark:bg-secondary dark:text-white duration-200">
       <Navbar />
       <Hero />
       <Products />
