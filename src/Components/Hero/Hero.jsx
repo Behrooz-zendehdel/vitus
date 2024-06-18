@@ -1,9 +1,9 @@
 import React from "react";
 
-import Image1 from "../../assets/Hero/anik-sefid-tala.png";
-import Image2 from "../../assets/Hero/antik-sefid-chrome.png";
-import Image3 from "../../assets/Hero/daria-rosobgir.png";
-import Image4 from "../../assets/Hero/zangole-tala.png";
+import Image1 from "../../assets/Hero/anik-sefid-tala-1.png";
+import Image2 from "../../assets/Hero/antik-sefid-chrome-2.png";
+import Image3 from "../../assets/Hero/daria-rosobgir-3.png";
+import Image4 from "../../assets/Hero/zangole-tala-4.png";
 
 import Slider from "react-slick";
 
@@ -72,7 +72,7 @@ const Hero = () => {
                   {/* text content section  */}
                   <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-right order-2 sm:order-1 relative z-10">
                     <h1
-                      data-aos="zoom-out"
+                      data-aos="fade-up"
                       data-aos-duration="500"
                       data-aos-once="true"
                       className="text-3xl sm:text-3xl lg:text-4xl font-bold "
@@ -100,7 +100,10 @@ const Hero = () => {
                   </div>
                   {/* image  section  */}
 
-                  <div className="order-1 sm:order-2 md:order-1">
+                  <div
+                    data-aos="fade-up"
+                    className="order-1 sm:order-2 md:order-1"
+                  >
                     <div className="relative z-10">
                       <img
                         src={data.img}

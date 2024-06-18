@@ -1,8 +1,8 @@
 import React from "react";
-import Img1 from "../../assets/Hero/anik-sefid-tala.png";
-import Img2 from "../../assets/Hero/antik-sefid-chrome.png";
-import Img3 from "../../assets/Hero/daria-rosobgir.png";
-import Img4 from "../../assets/Hero/zangole-tala.png";
+import Img1 from "../../assets/Hero/anik-sefid-tala-1.png";
+import Img2 from "../../assets/Hero/antik-sefid-chrome-2.png";
+import Img3 from "../../assets/Hero/daria-rosobgir-3.png";
+import Img4 from "../../assets/Hero/zangole-tala-4.png";
 import { FaStar } from "react-icons/fa6";
 
 const ProductsData = [

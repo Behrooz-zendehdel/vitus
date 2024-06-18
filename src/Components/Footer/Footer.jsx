@@ -1,5 +1,5 @@
 import react from "react";
-import Banner from "../../assets/splitNegative.svg";
+import Banner from "../../assets/splitNegative-1.svg";
 import Logo from "../../assets/logo.png";
 import {
   FaFacebook,

@@ -1,10 +1,10 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
 
-import Img1 from "../../assets/Hero/anik-sefid-tala.png";
-import Img2 from "../../assets/Hero/antik-sefid-chrome.png";
-import Img3 from "../../assets/Hero/daria-rosobgir.png";
-import Img4 from "../../assets/Hero/zangole-tala.png";
+import Img1 from "../../assets/Hero/anik-sefid-tala-1.png";
+import Img2 from "../../assets/Hero/antik-sefid-chrome-2.png";
+import Img3 from "../../assets/Hero/daria-rosobgir-3.png";
+import Img4 from "../../assets/Hero/zangole-tala-4.png";
 
 const ProductsData = [
   {
@@ -13,7 +13,7 @@ const ProductsData = [
     title: "علم دوش سفید طلایی",
     rating: 5.0,
     color: "white",
-    aosDelay: "400",
+    aosDelay: "100",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const ProductsData = [
     title: "علم دوش سفید کرومی",
     rating: 4.8,
     color: "red",
-    aosDelay: "500",
+    aosDelay: "150",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const ProductsData = [
     title: "علم دوش سفید ",
     rating: 4.9,
     color: "brown",
-    aosDelay: "600",
+    aosDelay: "200",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const ProductsData = [
     title: "علم دوش طلایی",
     rating: 4.7,
     color: "yellow",
-    aosDelay: "700",
+    aosDelay: "250",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const ProductsData = [
     title: "علم دوش طلایی",
     rating: 4.7,
     color: "yellow",
-    aosDelay: "800",
+    aosDelay: "300",
   },
 ];
 const Products = () => {
