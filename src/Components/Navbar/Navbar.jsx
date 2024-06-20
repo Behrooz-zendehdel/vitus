@@ -2,8 +2,7 @@ import React from "react";
 import DarkMode from "./DarkMode";
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
-import { FaCartShopping } from "react-icons/fa6";
-import { FaCaretDown } from "react-icons/fa6";
+import { FaCaretDown, FaMobileRetro, FaCartShopping } from "react-icons/fa6";
 import {
   FaInstagram,
   FaWhatsapp,
@@ -12,6 +11,7 @@ import {
   FaYoutube,
   FaLinkedin,
   FaPhone,
+  FaMobileAlt,
 } from "react-icons/fa";
 
 const Menu = [
@@ -113,7 +113,7 @@ const social = [
 const Navbar = () => {
   return (
     <>
-      <div className="container flex justify-between dark:bg-gray-950">
+      <div className="container md:flex md:justify-between  ">
         <div className="">
           <ul
             data-aos="fade-left"
@@ -134,11 +134,15 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex justify-between items-center pt-2">
-          <a className="mr-3 " href="tel:09222806847">
-            09222806847
+        <div className="flex justify-between  items-center pt-2">
+          <a className="mr-2 " href="tel:09129474604">
+            09129474604
           </a>
-          <FaPhone className="size-5" />
+          <FaPhone className="size-5 mr-2" />
+          <a className="mr-2" href="tel:02155840416">
+            02155840416
+          </a>
+          <FaMobileRetro className="size-5" />
         </div>
       </div>
       <div className="shadow-md bg-white dark:bg-gray-950 dark:text-white duration-200 relative z-40">

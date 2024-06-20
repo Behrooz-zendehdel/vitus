@@ -1,6 +1,4 @@
 import React from "react";
-
-import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import Products from "./Components/Products/Products";
 import TopProducts from "./Components/TopProducts/TopProducts";
@@ -9,6 +7,7 @@ import SubScribe from "./Components/SubScribe/SubScribe";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TestImonials from "./Components/TestImonials/TestImonials";
+import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
