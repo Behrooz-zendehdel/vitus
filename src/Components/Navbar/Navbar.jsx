@@ -135,7 +135,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex justify-between items-center pt-2">
-          <a className="mr-3 " href="09222806847">
+          <a className="mr-3 " href="tel:09222806847">
             09222806847
           </a>
           <FaPhone className="size-5" />
