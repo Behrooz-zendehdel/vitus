@@ -102,7 +102,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="mt-6">
-                <div className="flex items-center gap-3 mt-6">
+                <div className="flex items-center gap-3 mt-6">+
                   <FaLocationArrow className="text-3xl" />
                   <p>عبدل آباد خیابان زمزم کوچه فلانی پلاک فلانی </p>
                 </div>

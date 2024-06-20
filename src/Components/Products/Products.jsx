@@ -50,7 +50,7 @@ const ProductsData = [
 ];
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
+    <div id="products" className="mt-14 mb-12">
       <div>
         {
           // Header section
