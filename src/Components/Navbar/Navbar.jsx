@@ -127,7 +127,12 @@ const Navbar = () => {
                 className="pl-4
                 "
               >
-                <a href={data.link} target="blank" title={data.title}>
+                <a
+                  href={data.link}
+                  target="blank"
+                  title={data.title}
+                  className=" hover:text-primary hover:translate-x-3 duration-300"
+                >
                   {data.icon}
                 </a>
               </li>
@@ -135,11 +140,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex justify-between  items-center pt-2">
-          <a className="mr-2 " href="tel:09129474604">
+          <a className="mr-2 hover:text-primary  " href="tel:09129474604">
             09129474604
           </a>
           <FaPhone className="size-5 mr-2" />
-          <a className="mr-2" href="tel:02155840416">
+          <a className="mr-2 hover:text-primary " href="tel:02155840416">
             02155840416
           </a>
           <FaMobileRetro className="size-5" />
@@ -150,7 +155,10 @@ const Navbar = () => {
         <div className=" py-2">
           <div className="container flex justify-between items-center">
             <div>
-              <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
+              <a
+                href="#"
+                className="font-bold text-2xl sm:text-3xl flex gap-2  hover:text-primary"
+              >
                 ویتوس
               </a>
             </div>
@@ -208,7 +216,7 @@ const Navbar = () => {
                   {Dropdownlinks.map((data) => (
                     <li key={data.id}>
                       <a
-                        className="inline-block w-full text-center rounded-md p-2 hover:bg-primary/20 "
+                        className="inline-block w-full text-center rounded-md p-2  hover:text-primary "
                         href={data.link}
                       >
                         {data.name}

@@ -7,6 +7,9 @@ import {
   FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaTelegram,
+  FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 
 const BannerImg = {
@@ -36,31 +39,74 @@ const FooterLinks = [
     link: "/#blog  ",
   },
 ];
+const FooterRefs = [
+  {
+    title: "شیراز",
+    link: "/#",
+  },
+  {
+    title: "اصفهان",
+    link: "/#about",
+  },
+  {
+    title: "گیلان",
+    link: "/#contact",
+  },
+  {
+    title: "یزد",
+    link: "/#blog  ",
+  },
+];
 
 const Footer = () => {
   return (
     <div style={BannerImg}>
       <div data-aos="zoom-in" className="container  text-white">
-        <div className="grid md:grid-cols-3 pb-40 pt-5 ">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-40 pt-5 ">
           {/* company details  */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              ویتوس
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
-              architecto.
-            </p>
-          </div>
+
           {/* footer links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 ">
+            <div className="">
+              <div className="flex items-center gap-3 mt-6 flex-wrap ">
+                <a href="#" title="اینستاگرام">
+                  <FaInstagram className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                </a>
+                <a href="#" title="فیسبوک">
+                  <FaFacebook className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                </a>
+                <a href="#" title="واتساپ">
+                  <FaWhatsapp className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                </a>
+                <a href="#" title="یوتیوب">
+                  <FaYoutube className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                </a>
+                <a href="#" title="تلگرام">
+                  <FaTelegram className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                </a>
+                <a href="#" title="لینکدین">
+                  <FaLinkedin className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                </a>
+              </div>
+              <div className="mt-6">
+                <div className="flex items-center gap-3 mt-6">
+                  <a
+                    href="https://maps.app.goo.gl/giekZdwz6USbRNEN6"
+                    target="_blank"
+                    title="google map"
+                  >
+                    <FaLocationArrow className="text-3xl" />
+                  </a>
+                </div>
+              </div>
+            </div>
             <div>
-              <div className="py-8 px-4 ">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
+              <div className="py-8 px-4 text-right">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-right  mb-3">
+                  نمایندگان{" "}
                 </h1>
                 <ul>
-                  {FooterLinks.map((link) => (
+                  {FooterRefs.map((link) => (
                     <li
                       className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-ga200 "
                       key={link.id}
@@ -72,14 +118,14 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <div className="py-8 px-4 ">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
+              <div className="py-8 px-4 text-right">
+                <h1 className="sm:text-xl text-xl font-bold text-right  mb-3">
+                  لینک ها
                 </h1>
                 <ul>
                   {FooterLinks.map((link) => (
                     <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-ga200 "
+                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300  "
                       key={link.id}
                     >
                       <span>{link.title}</span>
@@ -89,33 +135,24 @@ const Footer = () => {
               </div>
             </div>
             {/* social link  */}
-            <div>
-              <div className="flex items-center gap-3 mt-6">
-                <a href="#">
-                  <FaInstagram className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaFacebook className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaLinkedin className="text-3xl" />
-                </a>
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-3 mt-6">+
-                  <FaLocationArrow className="text-3xl" />
-                  <p>عبدل آباد خیابان زمزم کوچه فلانی پلاک فلانی </p>
-                </div>
-                <div className="flex items-center gap-3 mt-6">
-                  <FaMobileAlt className="text-3xl" />
-                  <p>+989222806847</p>
-                </div>
-                <div className="flex items-center gap-3 mt-6">
-                  <FaMobileAlt className="text-3xl" />
-                  <p>+989351080958</p>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div className="py-8 px-4 text-right">
+            <h3 className="sm:text-3xl text-right font-bold text-xl  sm:text-right  mb-3  gap-3">
+              ویتوس
+            </h3>
+            <h1 className="font-bold text-xl ">کیفیت و راحتی در یک تجربه</h1>
+            <h2 className="pt-4">: دفتر مرکزی </h2>
+            <span className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300">
+              تهران - انتهای اتوبان نواب خیابان غلامرضایی بازار بورس کاشی و
+              سرامیک زمزم پلاک 249
+            </span>
+            <h1 className="pt-2">: تلفن دفتر </h1>
+            <a
+              href="tel:02155840416 "
+              className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300"
+            >
+              02155840416
+            </a>
           </div>
         </div>
       </div>
