@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "./Components/Hero/Hero";
+import Hero from "./Pages/Hero/Hero";
 import Products from "./Components/Products/Products";
 import TopProducts from "./Components/TopProducts/TopProducts";
 import Banner from "./Components/Banner/Banner";
@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import TestImonials from "./Components/TestImonials/TestImonials";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import Layout from "./Components/Layout/Layout";
 
 function App() {
   React.useEffect(() => {
