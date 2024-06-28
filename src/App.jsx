@@ -1,39 +1,26 @@
 import React from "react";
-import Hero from "./Pages/Hero/Hero";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./Pages/Home";
 import Products from "./Components/Products/Products";
 import TopProducts from "./Components/TopProducts/TopProducts";
 import Banner from "./Components/Banner/Banner";
 import SubScribe from "./Components/SubScribe/SubScribe";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import TestImonials from "./Components/TestImonials/TestImonials";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import Layout from "./Components/Layout/Layout";
+import ContactMe from "./Pages/ContactMe";
+import AboutMe from "./Pages/AboutMe";
 
 function App() {
-  React.useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 800,
-      easing: "ease-in-ease",
-      delay: 100,
-    });
-    AOS.refresh();
-  }, []);
-
   return (
-    <div className="bg-white dark:bg-secondary dark:text-white duration-200">
-      <Navbar />
-      <Hero />
-      <Products />
-      <TopProducts />
-      <Banner />
-      <SubScribe />
-      <Products />
-      <TestImonials />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/top products" element={<TopProducts />} />
+        <Route path="/banner" element={<Banner />} />
+        <Route path="/subscribe" element={<SubScribe />} />
+        <Route path="/contactme" element={<ContactMe />} />
+        <Route path="/aboutme" element={<AboutMe />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

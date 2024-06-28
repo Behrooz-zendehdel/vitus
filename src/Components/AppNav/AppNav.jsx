@@ -16,12 +16,12 @@ const Menu = [
   {
     id: 3,
     name: "تماس با ما",
-    link: "contactme",
+    link: "/contactme",
   },
   {
     id: 4,
     name: "درباره ما",
-    link: "aboutme",
+    link: "/aboutme",
   },
 ];
 
@@ -69,13 +69,13 @@ function AppNav() {
           </a>
           <div className=" absolute shadow-md z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black">
             <ul className="">
-              {Dropdownlinks.map((data) => (
-                <li key={data.id}>
+              {Dropdownlinks.map((datas) => (
+                <li key={datas.id}>
                   <Link
                     className="inline-block w-full text-center rounded-md p-2  hover:text-primary "
-                    to={data.link}
+                    to={datas.link}
                   >
-                    {data.name}
+                    {datas.name}
                   </Link>
                 </li>
               ))}

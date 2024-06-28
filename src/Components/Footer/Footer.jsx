@@ -61,7 +61,10 @@ const FooterRefs = [
 const Footer = () => {
   return (
     <div style={BannerImg}>
-      <div data-aos="zoom-in" className="container  text-white">
+      <div
+        data-aos="zoom-in"
+        className="container text-white dark:bg-secondary dark:text-white"
+      >
         <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-40 pt-5 ">
           {/* company details  */}
 
