@@ -19,6 +19,7 @@ const BannerImg = {
   backgroundSize: "",
   height: "100%",
   width: "100%",
+  color: "#000",
 };
 
 const FooterLinks = [
