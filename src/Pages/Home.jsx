@@ -15,6 +15,7 @@ import SubScribe from "../Components/SubScribe/SubScribe";
 import TestImonials from "../Components/TestImonials/TestImonials";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FcCheckmark } from "react-icons/fc";
 
 var setting = {
   dots: false,
@@ -22,7 +23,7 @@ var setting = {
 
   infinite: true,
   speed: 800,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000,
   slidesToShow: 1,
   cssEase: "ease-in-out",
@@ -37,9 +38,11 @@ const ImageList = [
     img: Image1,
     Title: "علم دوش  ویتوس  مدل آنتیک",
     color: "رنگ سفید طلایی",
-    Description:
-      " لوله استیل 202 جوشی ، شلنگ های رابط  150 سانت تمام قطعات برنجی ، سه راهی 140 گرم دسته فلز ، سردوش با گوشی ایرانی با بهترین متریال مواد اولیه",
-    Description2:
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش با گوشی ایرانی با بهترین متریال مواد اولیه",
+    Description5:
       " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
@@ -47,33 +50,36 @@ const ImageList = [
     img: Image2,
     Title: "علم دوش ویتوس مدل آنیتک ",
     color: "رنگ سفید کروم",
-    Description2:
-      " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
-    Description:
-      " لوله استیل 202 جوشی ، شلنگ های رابط  150 سانت تمام قطعات برنجی ، سه راهی 140 گرم دسته فلز ، سردوش با گوشی ایرانی با بهترین متریال مواد اولیه",
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش با گوشی ایرانی با بهترین متریال مواد اولیه",
+    Description5:
+      "تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
     id: 3,
     img: Image3,
     Title: "علم دوش ویتوس مدل دریا رسوب گیر ",
     color: "رنگ کروم",
-    Description: " لوله استیل 202 جوشی ، شلنگ های رابط  150 سانت تمام قطعات برنجی ، سه راهی 140 گرم دسته فلز ، قابلیت رسوب زدایی دستی در گوشی و سردوش طراحی خاص لوله  ",
-
-    Description2:
-    " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
-  
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "قابلیت رسوب زدایی دستی در گوشی و سردوش طراحی خاص لوله",
+    Description5:
+      " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
     id: 4,
     img: Image4,
     Title: "علم دوش  ویتوس مدل زنگوله ",
     color: " رنگ  طلایی براق",
-    Description:
-      " لوله استیل 202 جوشی ، شلنگ های رابط  150 سانت تمام قطعات برنجی ، سه راهی 140 گرم دسته فلز ، سردوش و گوشی طرح زنگوله با قطر 23 سانت طراحی خاص لوله",
-  
-      Description2:
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش و گوشی طرح زنگوله با قطر 23 سانت طراحی خاص لوله",
+    Description5:
       " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
-  
   },
 ];
 
@@ -110,18 +116,64 @@ const Home = () => {
                         >
                           {data.Title}
                         </h1>
-                        <h2 className="font-semibold ">{data.color}</h2>
-                        <p
+                        <h2
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                          className="font-semibold "
+                        >
+                          {data.color}
+                        </h2>
+                        {/* <p
                           data-aos="fade-up"
                           data-aos-duration="500"
                           data-aos-delay="100"
                           className="text-sm"
                         >
                           {data.Description}
+                        </p> */}
+                        <div className="flex flex-col font-bold ">
+                          <div
+                            className="flex flex-row-reverse items-center gap-2 "
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                          >
+                            <FcCheckmark size="1.5rem" />
+                            <span className="">{data.Description1}</span>
+                          </div>
+                          <div
+                            className="flex flex-row-reverse items-center  gap-2"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                          >
+                            <FcCheckmark size="1.5rem" />
+                            <span>{data.Description2}</span>
+                          </div>
+                          <div
+                            className="flex flex-row-reverse items-center  gap-2"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                          >
+                            <FcCheckmark size="1.5rem" />
+                            <span>{data.Description3}</span>
+                          </div>
+                          <div
+                            className="flex flex-row-reverse items-center  gap-2"
+                            data-aos="fade-up"
+                            data-aos-delay="500"
+                          >
+                            <FcCheckmark size="1.5rem" />
+                            <span>{data.Description4}</span>
+                          </div>
+                        </div>
+
+                        <p
+                          data-aos="fade-up"
+                          data-aos-delay="1000"
+                          className="font-bold "
+                        >
+                          {data.Description5}
                         </p>
-                        <p className="font-bold text-green-800">
-                          {data.Description2}
-                        </p>
+
                         <div
                           data-aos="fade-up"
                           data-aos-duration="500"
