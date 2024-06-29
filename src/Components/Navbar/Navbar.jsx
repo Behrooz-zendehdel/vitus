@@ -4,8 +4,13 @@ import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
 import AppNav from "../AppNav/AppNav";
 import SocialNav from "../SocialNav/SocialNav";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <SocialNav />
@@ -14,7 +19,8 @@ const Navbar = () => {
         <div className=" py-2">
           <div className="container flex justify-between items-center">
             <div>
-              <Link to="/"
+              <Link
+                to="/"
                 className="font-bold text-2xl sm:text-3xl flex gap-2  hover:text-primary"
               >
                 ویتوس

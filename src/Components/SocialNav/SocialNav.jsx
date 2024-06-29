@@ -63,11 +63,11 @@ const social = [
 
 function SocialNav() {
   return (
-    <div className="container md:flex md:justify-between  ">
+    <div className="container hidden md:flex md:justify-between   ">
       <div className="">
         <ul
           data-aos="fade-left"
-          className="flex justify-center items-start p-2"
+          className="flex justify-center items-start p-2 "
         >
           {social.map((data) => (
             <li

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCaretDown } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
+import Button from "../Navbar/Button";
 
 const Menu = [
   {
@@ -50,10 +51,13 @@ const Dropdownlinks = [
 function AppNav() {
   return (
     <div className="flex justify-center">
-      <ul className="sm:flex hidden items-center gap-4 flex-row-reverse ">
+      <ul className="sm:flex  items-center gap-4   flex-row-reverse ">
         {Menu.map((data) => (
           <li key={data.id}>
-            <NavLink className="inline-block px-4" to={data.link}>
+            <NavLink
+              className="inline-block px-4  w-full text-right"
+              to={data.link}
+            >
               {data.name}
             </NavLink>
           </li>
@@ -83,6 +87,7 @@ function AppNav() {
           </div>
         </li>
       </ul>
+      {/* <Button></Button> */}
     </div>
   );
 }

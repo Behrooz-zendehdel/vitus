@@ -131,7 +131,7 @@ const Home = () => {
                         >
                           {data.Description}
                         </p> */}
-                        <div className="flex flex-col font-bold ">
+                        <div className="flex flex-col font-bold text-end ">
                           <div
                             className="flex flex-row-reverse items-center gap-2 "
                             data-aos="fade-up"
@@ -169,7 +169,7 @@ const Home = () => {
                         <p
                           data-aos="fade-up"
                           data-aos-delay="1000"
-                          className="font-bold "
+                          className="font-bold text-end "
                         >
                           {data.Description5}
                         </p>
