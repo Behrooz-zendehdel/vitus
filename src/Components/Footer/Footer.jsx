@@ -12,15 +12,15 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-const BannerImg = {
-  backgroundImage: `url(${Banner})`,
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "",
-  height: "100%",
-  width: "100%",
-  color: "#000",
-};
+// const BannerImg = {
+//   backgroundImage: `url(${Banner})`,
+//   backgroundPosition: "center",
+//   backgroundRepeat: "no-repeat",
+//   backgroundSize: "",
+//   height: "100%",
+//   width: "100%",
+//   color: "#000",
+// };
 
 const FooterLinks = [
   {
@@ -61,12 +61,9 @@ const FooterRefs = [
 
 const Footer = () => {
   return (
-    <div style={BannerImg}>
-      <div
-        data-aos="zoom-in"
-        className="container text-white dark:bg-secondary dark:text-white"
-      >
-        <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-40 pt-5 ">
+    <div className=" w-full dark:bg-secondary dark:text-white bg-secondary text-white">
+      <div data-aos="zoom-in" className="container ">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-10 pt-5 ">
           {/* company details  */}
 
           {/* footer links */}
@@ -159,6 +156,15 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <hr />
+      <div className="flex flex-col items-center pb-2 pt-2">
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          BiziFront طراحی شده توسط تیم
+        </p>
+        <p className="text-xs text-gray-500 dark:text-gray-300">
+          Contact us at: BiziFront@gmail.com | Visit us at: www.BiziFront.ir
+        </p>
       </div>
     </div>
   );

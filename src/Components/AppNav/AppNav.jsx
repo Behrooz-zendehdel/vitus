@@ -50,12 +50,12 @@ const Dropdownlinks = [
 ];
 function AppNav() {
   return (
-    <div className="flex justify-center">
-      <ul className="sm:flex  items-center gap-4   flex-row-reverse ">
+    <div className="flex justify-center ">
+      <ul className="sm:flex  items-center  gap-4   flex-row-reverse ">
         {Menu.map((data) => (
           <li key={data.id}>
             <NavLink
-              className="inline-block px-4  w-full text-right"
+              className="inline-block px-4  w-full text-center"
               to={data.link}
             >
               {data.name}

@@ -100,14 +100,14 @@ const Home = () => {
           {/* background pattern  */}
           <div className="  absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-9"></div>
           {/* hero section  */}
-          <div className="container pb-8 sm:pb-0 ">
+          <div className="container pb-8 sm:pb-24 ">
             <Slider {...setting}>
               {ImageList.map((data) => {
                 return (
                   <div key={data.id}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 ">
                       {/* text content section  */}
-                      <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-right order-2 sm:order-1 relative z-10">
+                      <div className="flex flex-col justify-center gap-2 pt-2 sm:pt-2 text-center sm:text-right order-2 sm:order-1 relative z-10">
                         <h1
                           data-aos="fade-up"
                           data-aos-duration="500"
