@@ -23,7 +23,7 @@ var setting = {
 
   infinite: true,
   speed: 800,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 3000,
   slidesToShow: 1,
   cssEase: "ease-in-out",
