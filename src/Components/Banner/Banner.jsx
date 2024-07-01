@@ -17,35 +17,38 @@ const Banner = () => {
           </div>
           {/* text details section  */}
           <div>
-            <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
-              Winter Sale upto 50% Off
-            </h1>
+            <h3
+              data-aos="fade-up"
+              className="text-xl sm:text-xl font-bold text-center"
+            >
+              بسته بندی‌های با کیفیت برند ویتوس = هماهنگی بین زیبایی و عملکرد
+            </h3>
             <p
               data-aos="fade-up"
-              className="text-sm text-gray-500 tracking-wide leading-5"
+              className="text-sm text-gray-500 tracking-wide leading-5 text-right pt-4"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              explicabo quia, esse cumque expedita nulla molestias atque quasi
-              repellat molestiae!
+              بسته بندی‌های جدید با برند ویتوس از جنبه‌های طراحی، کیفیت مواد
+              استفاده شده و دقت در جزئیات، نمایانگر تعهد شرکت به ارائه محصولاتی
+              با استانداردهای بالا و تجربه کاربری بی‌نظیر هستند
             </p>
-            <div className="flex flex-col gap-4 pt-">
+            <div className="flex flex-col gap-4 items-end p-4">
               <div data-aos="fade-up" className="flex items-center gap-4">
                 <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
-                <p data-aos="fade-up">Quaility Products</p>
+                <p data-aos="fade-up">استانداردهای بالا</p>
               </div>
               <div data-aos="fade-up " className="flex items-center gap-4  ">
                 <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
-                <p data-aos="fade-up"> Fast Delivery</p>
+                <p data-aos="fade-up"> طراحی شگفت‌انگیز</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 pt-4">
+            <div className="flex flex-col items-end  gap-4 p-4">
               <div data-aos="fade-up" className="flex items-center gap-4">
                 <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
-                <p data-aos="fade-up">Quaility Products</p>
+                <p data-aos="fade-up">جزئیات دقیق</p>
               </div>
               <div data-aos="fade-up " className="flex items-center gap-4 ">
                 <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
-                <p data-aos="fade-up"> Fast Delivery</p>
+                <p data-aos="fade-up">تعهد به کیفیت</p>
               </div>
             </div>
           </div>

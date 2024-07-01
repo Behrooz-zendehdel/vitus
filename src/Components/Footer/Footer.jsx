@@ -61,7 +61,7 @@ const FooterRefs = [
 
 const Footer = () => {
   return (
-    <div className=" w-full dark:bg-secondary dark:text-white bg-secondary text-white">
+    <div className=" w-full bg-gray-900 dark:text-white text-white">
       <div data-aos="zoom-in" className="container ">
         <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-10 pt-5 ">
           {/* company details  */}
@@ -90,7 +90,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="mt-6">
-                <div className="flex items-center gap-3 mt-6">
+                <div className="flex items-center gap-3 mt-6 hover:text-primary">
                   <a
                     href="https://maps.app.goo.gl/giekZdwz6USbRNEN6"
                     target="_blank"
@@ -138,10 +138,10 @@ const Footer = () => {
             {/* social link  */}
           </div>
           <div className="py-8 px-4 text-right">
-            <h3 className="sm:text-3xl text-right font-bold text-xl  sm:text-right  mb-3  gap-3">
+            <h3 className="sm:text-3xl text-right font-bold text-xl  sm:text-right  mb-3  gap-3 hover:text-primary">
               ویتوس
             </h3>
-            <h1 className="font-bold text-xl ">کیفیت و راحتی در یک تجربه</h1>
+            <h1 className="font-bold text-xl hover:text-primary ">کیفیت و راحتی در یک تجربه</h1>
             <h2 className="pt-4">: دفتر مرکزی </h2>
             <span className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300">
               تهران - انتهای اتوبان نواب خیابان غلامرضایی بازار بورس کاشی و

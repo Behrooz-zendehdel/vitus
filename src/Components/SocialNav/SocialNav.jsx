@@ -63,7 +63,7 @@ const social = [
 
 function SocialNav() {
   return (
-    <div className="container hidden md:flex md:justify-between   ">
+    <div className="container hidden md:flex md:justify-between  dark:bg-secondary dark:text-white ">
       <div className="">
         <ul
           data-aos="fade-left"

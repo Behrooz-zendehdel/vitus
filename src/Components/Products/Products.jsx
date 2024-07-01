@@ -1,54 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa6";
+import { FcSettings } from "react-icons/fc";
 
-import Img1 from "../../assets/Hero/anik-sefid-tala-1.png";
-import Img2 from "../../assets/Hero/antik-sefid-chrome-2.png";
-import Img3 from "../../assets/Hero/daria-rosobgir-3.png";
-import Img4 from "../../assets/Hero/zangole-tala-4.png";
+import Image1 from "../../assets/Hero/anik-sefid-tala-1.png";
+import Image2 from "../../assets/Hero/antik-sefid-chrome-2.png";
+import Image3 from "../../assets/Hero/daria-rosobgir-3.png";
+import Image4 from "../../assets/Hero/zangole-tala-4.png";
+import { Rings } from "react-loader-spinner";
 
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
-    title: "علم دوش سفید طلایی",
-    rating: 5.0,
-    color: "white",
-    aosDelay: "100",
+    img: Image1,
+    Title: "علم دوش  ویتوس  مدل آنتیک",
+    color: "رنگ سفید طلایی",
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش با گوشی ایرانی با بهترین متریال مواد اولیه",
+    Description5:
+      " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
     id: 2,
-    img: Img2,
-    title: "علم دوش سفید کرومی",
-    rating: 4.8,
-    color: "red",
-    aosDelay: "150",
+    img: Image2,
+    Title: "علم دوش ویتوس مدل آنیتک ",
+    color: "رنگ سفید کروم",
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش با گوشی ایرانی با بهترین متریال مواد اولیه",
+    Description5:
+      "تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
     id: 3,
-    img: Img3,
-    title: "علم دوش سفید ",
-    rating: 4.9,
-    color: "brown",
-    aosDelay: "200",
+    img: Image3,
+    Title: "علم دوش ویتوس مدل دریا رسوب گیر ",
+    color: "رنگ کروم",
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "قابلیت رسوب زدایی دستی در گوشی و سردوش طراحی خاص لوله",
+    Description5:
+      " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
     id: 4,
-    img: Img4,
-    title: "علم دوش طلایی",
-    rating: 4.7,
-    color: "yellow",
-    aosDelay: "250",
+    img: Image4,
+    Title: "علم دوش  ویتوس مدل زنگوله ",
+    color: " رنگ  طلایی براق",
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش و گوشی طرح زنگوله با قطر 23 سانت طراحی خاص لوله",
+    Description5:
+      " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
   {
     id: 5,
-    img: Img4,
-    title: "علم دوش طلایی",
-    rating: 4.7,
-    color: "yellow",
-    aosDelay: "300",
+    img: Image4,
+    Title: "علم دوش  ویتوس مدل زنگوله ",
+    color: " رنگ  طلایی براق",
+    Description1: "لوله استیل 202 جوشی",
+    Description2: "شلنگ های رابط  150 سانت تمام برنجی",
+    Description3: "سه راهی 140 گرم دسته فلز",
+    Description4: "سردوش و گوشی طرح زنگوله با قطر 23 سانت طراحی خاص لوله",
+    Description5:
+      " تمامی محصولات ویتوس شامل : 1 سال بیمه کالا و 3 سال ضمانت تعویض قطعات می باشد ",
   },
 ];
 const Products = () => {
+  const [open, setOpen] = useState(null);
+
+  const [load, setLoad] = useState(false);
+
+  const handleToggle = (id) => {
+    setOpen(open === id ? null : id);
+  };
+
   return (
     <div id="products" className="mt-14 mb-12">
       <div>
@@ -76,28 +106,69 @@ const Products = () => {
               data-aos="fade-up"
               data-aos-delay={data.aosDelay}
               key={data.id}
-              className="space-y-3 "
+              className="space-y-3 item-products text-center "
             >
               <img
-                className="h-[220px] w-[150px] object-cover rounded-md"
+                className="h-[220px] w-[150px] object-fill rounded-md"
                 src={data.img}
                 alt=""
               />
-              <div>
-                <h3 className="font-semibold">{data.title}</h3>
-                <p className="text-sm text-gray-600">{data.color}</p>
-                <div className="flex items-center gap-1">
-                  <FaStar className="text-yellow-500" />
-                  <span> {data.rating}</span>
-                </div>
+              <button
+                onClick={() => handleToggle(data.id)}
+                className="text-center p-4 rounded-md mt-10  hover:bg-secondary bg-primary cursor-pointer text-white py-1  "
+              >
+                {open === data.id ? "بستن" : "مشاهده اطلاعات"}
+              </button>
+              <div className={`details ${open === data.id ? "open" : ""}`}>
+                {open === data.id && (
+                  <div className="flex flex-col  text-right transition-shadow">
+                    <h3 className="font-semibold">{data.Title}</h3>
+                    <div>
+                      <p className="text-sm text-gray-600 flex flex-row-reverse gap-2 pt-2">
+                        <FcSettings size="20px" /> {data.Description1}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-600 flex flex-row-reverse gap-2 pt-2">
+                        <FcSettings size="20px" /> {data.Description2}
+                      </p>
+                    </div>
+
+                    <div className="flex justify-evenly  items-center    pt-2 ">
+                      <FaStar className="text-yellow-500" />
+                      <FaStar className="text-yellow-500" />
+                      <FaStar className="text-yellow-500" />
+                      <FaStar className="text-yellow-500" />
+                      <FaStar className="text-yellow-500" />
+                      <span className="font-bold">امتیاز</span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
         {/* view all button  */}
         <div className="flex justify-center">
-          <button className="text-center p-4 rounded-md mt-10  hover:bg-secondary bg-primary cursor-pointer text-white py-1  ">
-            مشاهده محصولات
+          <button
+            onClick={() => setLoad(!load)}
+            className={` ${
+              load ? "bg-white" : "bg-secondary"
+            }  text-center p-4 rounded-md mt-10  bg-secondary  cursor-pointer text-white py-1`}
+          >
+            {load ? (
+              <Rings
+                visible={true}
+                height="50"
+                width="50"
+                color="#4834d4"
+                ariaLabel="rings-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            ) : (
+              "محصولات دیگر"
+            )}
           </button>
         </div>
       </div>

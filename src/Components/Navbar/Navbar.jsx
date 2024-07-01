@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <SocialNav />
-      <div className="shadow-md bg-white dark:bg-gray-950 dark:text-white duration-200 relative z-40">
+      <div className="shadow-md  dark:bg-secondary dark:text-white duration-200 relative z-40">
         {/* upper Navbar */}
         <div className="py-2">
           <div className="container flex justify-between items-center">

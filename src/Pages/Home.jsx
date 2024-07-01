@@ -96,7 +96,7 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px]  flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200">
+        <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px]  flex justify-center items-center dark:bg-secondary dark:text-white duration-200">
           {/* background pattern  */}
           <div className="  absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-9"></div>
           {/* hero section  */}
@@ -131,14 +131,16 @@ const Home = () => {
                         >
                           {data.Description}
                         </p> */}
-                        <div className="flex flex-col font-bold text-end ">
+                        <div className="flex flex-col font-thin text-end ">
                           <div
                             className="flex flex-row-reverse items-center gap-2 "
                             data-aos="fade-up"
                             data-aos-delay="200"
                           >
                             <FcCheckmark size="1.5rem" />
-                            <span className="">{data.Description1}</span>
+                            <span className="hover:scale-110 hover:font-bold">
+                              {data.Description1}
+                            </span>
                           </div>
                           <div
                             className="flex flex-row-reverse items-center  gap-2"
@@ -146,7 +148,9 @@ const Home = () => {
                             data-aos-delay="300"
                           >
                             <FcCheckmark size="1.5rem" />
-                            <span>{data.Description2}</span>
+                            <span className="hover:scale-110 hover:font-bold">
+                              {data.Description2}
+                            </span>
                           </div>
                           <div
                             className="flex flex-row-reverse items-center  gap-2"
@@ -154,7 +158,9 @@ const Home = () => {
                             data-aos-delay="400"
                           >
                             <FcCheckmark size="1.5rem" />
-                            <span>{data.Description3}</span>
+                            <span className="hover:scale-110 hover:font-bold">
+                              {data.Description3}
+                            </span>
                           </div>
                           <div
                             className="flex flex-row-reverse items-center  gap-2"
@@ -162,14 +168,16 @@ const Home = () => {
                             data-aos-delay="500"
                           >
                             <FcCheckmark size="1.5rem" />
-                            <span>{data.Description4}</span>
+                            <span className="hover:scale-110 hover:font-bold">
+                              {data.Description4}
+                            </span>
                           </div>
                         </div>
 
                         <p
                           data-aos="fade-up"
                           data-aos-delay="1000"
-                          className="font-bold text-end "
+                          className="font-bold text-end hover:text-green-900 "
                         >
                           {data.Description5}
                         </p>
@@ -210,7 +218,6 @@ const Home = () => {
         <TopProducts />
         <Banner />
         <SubScribe />
-        <Products />
         <TestImonials />
       </Layout>
     </>
