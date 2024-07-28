@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap");
+
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+a.active {
+  font-weight: 600;
+  color: #4834d4;
+}
+
+/* 
+.item-products {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+  border: 1px solid #000;
+} */
+
+/* .item-products .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+} */
+
+.font-num {
+  font-family: "Ga Maamli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.item-products .details.open {
+  max-height: 500px; /* یا هر مقدار دیگری که مناسب اطلاعات شما باشد */
+  opacity: 1;
+}
+
+/* -------------------- */
+
+.product-details {
+ 
+}
+
+.image-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-container {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.desc-details {
+  padding: 20px;
+  text-align: right;
+}
+
+.desc-details h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.desc-details p {
+  font-size: 16px;
+  color: #888;
+}
+
+.desc-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.desc-details li {
+  font-weight: bold;
+  color: #888;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 10px;
+}
