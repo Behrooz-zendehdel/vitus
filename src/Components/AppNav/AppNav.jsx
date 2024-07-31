@@ -42,7 +42,7 @@ function AppNav() {
               className="inline-block px-4  w-full text-center "
               href={data.link}
             >
-              {data.name} 
+              {data.name}
             </a>
           </li>
         ))}

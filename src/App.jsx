@@ -11,10 +11,12 @@ import Agent from "./Pages/Agent";
 
 import Product from "./Components/Products/Product";
 import ProductHose from "./Components/ProductHose/ProductHose";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="product/:id" element={<Product />} />
