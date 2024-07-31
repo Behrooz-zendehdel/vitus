@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCaretDown } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
-import Button from "../Navbar/Button";
 
 const Menu = [
   {
@@ -39,12 +38,12 @@ function AppNav() {
       <ul className="sm:flex  items-center  gap-4   flex-row-reverse ">
         {Menu.map((data) => (
           <li key={data.id}>
-            <NavLink
-              className="inline-block px-4  w-full text-center"
-              to={data.link}
+            <a
+              className="inline-block px-4  w-full text-center "
+              href={data.link}
             >
-              {data.name}
-            </NavLink>
+              {data.name} 
+            </a>
           </li>
         ))}
 

@@ -10,6 +10,10 @@ a.active {
   color: #4834d4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 
 .item-products {
   flex-direction: column;
@@ -42,7 +46,6 @@ a.active {
 /* -------------------- */
 
 .product-details {
- 
 }
 
 .image-details {

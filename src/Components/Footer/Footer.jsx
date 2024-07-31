@@ -11,6 +11,7 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // const BannerImg = {
 //   backgroundImage: `url(${Banner})`,
@@ -24,20 +25,20 @@ import {
 
 const FooterLinks = [
   {
-    title: "خانه",
-    link: "/#",
+    name: "خانه",
+    link: "/",
   },
   {
-    title: "محصولات",
-    link: "/#about",
+    name: "محصولات",
+    link: "#products",
   },
   {
-    title: "درباره ما",
-    link: "/#contact",
+    name: "درباره ما",
+    link: "/aboutme",
   },
   {
-    title: "نمایندگی ها",
-    link: "/#blog  ",
+    name: "نمایندگی ها",
+    link: "/agent  ",
   },
 ];
 const FooterRefs = [
@@ -129,7 +130,7 @@ const Footer = () => {
                       className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300  "
                       key={select.id}
                     >
-                      <span>{select.title}</span>
+                      <a href={select.link}>{select.name}</a>
                     </li>
                   ))}
                 </ul>

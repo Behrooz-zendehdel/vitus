@@ -133,7 +133,7 @@ const ProductImage = [
 
 const Products = () => {
   return (
-    <div id="" className="mt-14 mb-12">
+    <div id="products" className="mt-14 mb-12 ">
       <div>
         <div className="text-center mb-10 max-w-[600px] mx-auto ">
           <p data-aos="fade-up" className="text-sm text-primary">
