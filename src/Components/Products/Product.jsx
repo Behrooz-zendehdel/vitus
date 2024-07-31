@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../Layout/Layout";
-// --------
+import Slider from "react-slick";
+
+// Import your images
 import ariachrome1 from "../../assets/imageProducts/ariachrome/ariachrome1.png";
 import ariachrome2 from "../../assets/imageProducts/ariachrome/ariachrome2.png";
 import ariachrome3 from "../../assets/imageProducts/ariachrome/ariachrome3.png";
@@ -21,21 +23,17 @@ import antikchrome3 from "../../assets/imageProducts/antikchrome/antikchrome3.pn
 import antikchrome4 from "../../assets/imageProducts/antikchrome/antikchrome4.png";
 import antikchrome5 from "../../assets/imageProducts/antikchrome/antikchrome5.png";
 // -----------
-import antiksefidchrome from "../../assets/imageProducts/antiksadafchrome/A-DSC_5492.jpg";
-import Slider from "react-slick";
-// ----------------------------------
 import ariagold11 from "../../assets/imageProducts/ariagold/ariagold11.png";
 import ariagold22 from "../../assets/imageProducts/ariagold/ariagold22.png";
 import ariagold33 from "../../assets/imageProducts/ariagold/ariagold33.png";
 import ariagold44 from "../../assets/imageProducts/ariagold/ariagold44.png";
-// import ariagold5 from "../../assets/imageProducts/ariagold/ariagold5.jpg";
 import ariagold66 from "../../assets/imageProducts/ariagold/ariagold66.png";
-// import ariagold7 from "../../assets/imageProducts/ariagold/ariagold7.jpg";
 // ----------------------
 import amazonchrome11 from "../../assets/imageProducts/amazonchrome/amazonchrom11.png";
 import amazonchrome22 from "../../assets/imageProducts/amazonchrome/amazonchrom22.png";
 import amazonchrome33 from "../../assets/imageProducts/amazonchrome/amazonchrom33.png";
 import amazonchrome44 from "../../assets/imageProducts/amazonchrome/amazonchrom44.png";
+
 const ProductImage = [
   {
     id: 1,
@@ -60,9 +58,7 @@ const ProductImage = [
       ariagold22,
       ariagold33,
       ariagold44,
-      // ariagold5,
       ariagold66,
-      // ariagold7,
     ],
     title: "آریا طلایی ",
     desc1: "قابلیت ترکیب آب و هوا جهت فشار آب بیشتر ",
@@ -101,135 +97,15 @@ const ProductImage = [
     desc1: "قیمت اقتصادی ",
     desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
     desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
+    desc4: "یکسال بیمه محصول حتی پس از استفاده ",
   },
-  {
-    id: 4,
-    images: [],
-    title: "آنتیک طلایی ",
-    desc1: "قیمت اقتصادی ",
-    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
-    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 5,
-    images: [],
-    title: "آنتیک مشکی طلایی ",
-    desc1: "قیمت اقتصادی ",
-    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
-    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 6,
-    images: [],
-    title: "آنتیک مشکی کروم ",
-    desc1: "قیمت اقتصادی ",
-    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
-    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 7,
-    images: [],
-    title: "آنتیک  سفید ",
-    desc1: "قیمت اقتصادی ",
-    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
-    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 8,
-    images: [],
-    title: "آنتیک  سفید کروم ",
-    desc1: "قیمت اقتصادی ",
-    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
-    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 9,
-    images: [],
-    title: "آنتیک  سفید طلایی ",
-    desc1: "قیمت اقتصادی ",
-    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
-    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 14,
-    images: [],
-    title: " صدف کروم",
-    desc1: "قیمت اقتصادی",
-    desc2: "سردوش و گوشی تمام ای بی اس با جوش تمام پلاستیک",
-    desc3: "امکان ترکیب آب و هوا جهت افزایش فشارآب و کاهش مصرف ",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 11,
-    images: [],
-    title: " دریا رسوب گیر",
-    desc1: "امکان رسوب زدایی سردوش بزرگ و گوشی به صورت دستی",
-    desc2: "استفاده از بهترین متریال در سردوش و گوشی",
-    desc3: "گوشی دستی با قابلیت پاشش آب در سه حالت ",
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 13,
-    images: [],
-    title: "خورشید کروم",
-    desc1: "طراحی لوکس و خاص لوله و سردوشو گوشی",
-    desc2: "امکان انتخاب در 8 رنگ مختلف",
-    desc3: "امکان ترکیب آب و هوا جهت افزایش فشارآب و کاهش مصرف ",
-
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 16,
-    images: [],
-    title: "زنگوله طلایی",
-    desc1: "نازل های یک تیکه جهت سهولت در تمیز کاری",
-    desc2: "اتصال سردوش بزرگ با پیچ های آلومینیومی",
-    desc3: "طراحی لوکس و خاص لوله و سردوشو گوشی",
-
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 15,
-    images: [],
-    title: "زنگوله کروم",
-    desc1: "نازل های یک تیکه جهت سهولت در تمیز کاری",
-    desc2: "اتصال سردوش بزرگ با پیچ های آلومینیومی",
-    desc3: "طراحی لوکس و خاص لوله و سردوشو گوشی",
-
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 17,
-    images: [],
-    title: "زنگوله سفید طلایی",
-    desc1: "نازل های یک تیکه جهت سهولت در تمیز کاری",
-    desc2: "اتصال سردوش بزرگ با پیچ های آلومینیومی",
-    desc3: "طراحی لوکس و خاص لوله و سردوشو گوشی",
-
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
-  {
-    id: 12,
-    images: [],
-    title: "هما وی ای پی",
-    desc1: "سردوش خاص و بزرگ سایز 30 در 30 ",
-    desc2: "سه راهی و گوشی فیکس روی دیوار ",
-    desc3: "امکان ترکیب آب و هوا جهت افزایش فشارآب و کاهش مصرف ",
-
-    desc4: "یکسال بیمه محصول حتی پس از استفاده ", //این روی همه اش باید باشه
-  },
+  // Add other products as needed
 ];
 
 function Product() {
   const { id } = useParams();
   const product = ProductImage.find((p) => p.id === Number(id));
+  const [currentImage, setCurrentImage] = useState(product.images[0]);
 
   if (!product) {
     return <div>محصول پیدا نشد</div>;
@@ -242,55 +118,51 @@ function Product() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (current, next) => setCurrentImage(product.images[next]),
   };
 
   return (
     <Layout>
       <div className="container">
-        <div className="product-details md:p-12 sm:p-4 grid sm:grid-cols-1 md:grid-cols-2   ">
-          <div className="image-details justify-center items-center ">
-            <div className="slider-container w-[200px] h-[200px] mb-[40px] ">
-              <Slider {...settings}>
-                {product.images.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      src={image}
-                      className="w-[200px] h-[200px] pt-4"
-                      alt={`Product ${index + 1}`}
-                    />
-                  </div>
-                ))}
-              </Slider>
+        <div className="product-details md:p-12 sm:p-4 grid sm:grid-cols-1 md:grid-cols-2">
+          <div className="image-details justify-center items-center">
+            <div className="slider-container w-[200px] h-[200px] mb-[40px]">
+              <img
+                src={currentImage}
+                className="w-[200px] h-[200px] pt-4"
+                alt="Product"
+              />
             </div>
-            <div className="thumbnail-container">
+            <div className="thumbnail-container flex">
               {product.images.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
-                  className="thumbnail "
+                  className="thumbnail w-[50px] h-[50px] m-2 cursor-pointer"
+                  onClick={() => setCurrentImage(image)}
                 />
               ))}
             </div>
           </div>
           <div className="desc-details flex-1 p-4 text-end">
-            <h1 className="font-bold md:text-2xl sm:text-xl ">
+            <h1 className="font-bold md:text-2xl sm:text-xl">
               علم دوش ویتوس مدل {product.title}
             </h1>
             <p className="sm:text-xl md:text-xl text-gray-500 pt-2">
               {product.descdetail}
             </p>
             <ul>
-              <li className="font-bold text-gray-400 bg-gray-200 flex text-center m-2 p-2 justify-end  ">
+              <li className="font-bold text-gray-400 bg-gray-200 flex text-right m-2 p-2 justify-end">
                 {product.desc1}
               </li>
-              <li className="font-bold text-gray-400  bg-gray-200 flex text-center m-2 p-2 justify-end ">
+              <li className="font-bold text-gray-400 bg-gray-200 flex text-right m-2 p-2 justify-end">
                 {product.desc2}
               </li>
-              <li className="font-bold text-gray-400  bg-gray-200 flex text-center m-2 p-2 justify-end ">
+              <li className="font-bold text-gray-400 bg-gray-200 flex text-right m-2 p-2 justify-end">
                 {product.desc3}
               </li>
-              <li className="font-bold text-gray-400  bg-gray-200 flex text-center m-2 p-2 justify-end ">
+              <li className="font-bold text-gray-400 bg-gray-200 flex text-right m-2 p-2 justify-end">
                 {product.desc4}
               </li>
             </ul>
