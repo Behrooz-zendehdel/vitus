@@ -1,4 +1,3 @@
-// ContactForm.js
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Layout from "../Components/Layout/Layout";
@@ -25,6 +24,18 @@ const Agent = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // بررسی پر بودن فیلدها
+    if (
+      !formData.phone ||
+      !formData.name ||
+      !formData.address ||
+      !formData.businessName ||
+      !formData.city
+    ) {
+      setMessage("لطفا تمامی فیلدهای ضروری را پر کنید");
+      return;
+    }
+
     emailjs
       .send(
         "service_ylpx4rg",
@@ -34,16 +45,19 @@ const Agent = () => {
       )
       .then(
         (result) => {
-          setMessage();
+          setMessage("");
+          notify();
         },
         (error) => {
           setMessage("ارسال ایمیل با خطا مواجه شد. لطفا دوباره تلاش کنید");
         }
       );
   };
+
   const notify = () => {
     toast.success("سپاس از همراهی شما در اسرع وقت با شما تماس حاصل میشود ");
   };
+
   return (
     <Layout>
       <div className="container text-right">
@@ -52,23 +66,10 @@ const Agent = () => {
           <p className="pt-4 pb-12">
             بعد از بررسی احراز هویت کارشناسان مجموعه با شما تماس خواهند گرفت
           </p>
-          {message && <p className="pb-4">{message}</p>}
+          {message && <p className="pb-4 text-red-500">{message}</p>}
           <div className="flex items-center justify-center border p-2 rounded-lg md:w-[600px]">
             <form className="w-full max-w-lg" onSubmit={sendEmail}>
               <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-1/2 px-3">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-right">
-                    شماره تماس خود را وارد کنید
-                  </label>
-                  <input
-                    className="appearance-none block w-full text-right bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    type="text"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="09121234567"
-                  />
-                </div>
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-right">
                     نام و نام خانوادگی خود را وارد کنید
@@ -80,6 +81,21 @@ const Agent = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="علی حسینی"
+                    tabIndex="1"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 px-3">
+                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-right">
+                    شماره تماس خود را وارد کنید
+                  </label>
+                  <input
+                    className="appearance-none block w-full text-right bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="09121234567"
+                    tabIndex="2"
                   />
                 </div>
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -92,6 +108,7 @@ const Agent = () => {
                     name="address"
                     value={formData.address}
                     onChange={handleChange}
+                    tabIndex="3"
                   />
                 </div>
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -104,6 +121,7 @@ const Agent = () => {
                     name="businessName"
                     value={formData.businessName}
                     onChange={handleChange}
+                    tabIndex="4"
                   />
                 </div>
               </div>
@@ -118,6 +136,7 @@ const Agent = () => {
                       name="shopOwner"
                       value={formData.shopOwner}
                       onChange={handleChange}
+                      tabIndex="5"
                     >
                       <option>بله</option>
                       <option>خیر</option>
@@ -134,6 +153,7 @@ const Agent = () => {
                       name="activityType"
                       value={formData.activityType}
                       onChange={handleChange}
+                      tabIndex="6"
                     >
                       <option>پخش کننده</option>
                       <option>فروشگاه دار</option>
@@ -150,6 +170,7 @@ const Agent = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
+                    tabIndex="7"
                   />
                 </div>
               </div>
@@ -157,7 +178,7 @@ const Agent = () => {
                 <button
                   className="bg-secondary text-white hover:bg-primary font-bold py-2 px-2 rounded"
                   type="submit"
-                  onClick={notify}
+                  tabIndex="8"
                 >
                   ارسال
                 </button>
@@ -166,6 +187,7 @@ const Agent = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </Layout>
   );
 };
