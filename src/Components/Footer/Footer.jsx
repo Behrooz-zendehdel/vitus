@@ -62,7 +62,7 @@ const FooterRefs = [
 
 const Footer = () => {
   return (
-    <div className=" w-full dark:bg-gray-900 dark:text-white text-black ">
+    <div className=" w-full dark:bg-secondary dark:text-white text-black ">
       <div data-aos="zoom-in" className="container ">
         <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-10 pt-5 ">
           {/* company details  */}
@@ -72,26 +72,26 @@ const Footer = () => {
             <div className="">
               <div className="flex items-center gap-3 mt-6 flex-wrap ">
                 <a href="#" title="اینستاگرام">
-                  <FaInstagram className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                  <FaInstagram className="text-3xl cursor-pointer hover:text-black hover:translate-x-1 duration-300" />
                 </a>
                 <a href="#" title="فیسبوک">
-                  <FaFacebook className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                  <FaFacebook className="text-3xl cursor-pointer hover:text-black hover:translate-x-1 duration-300" />
                 </a>
                 <a href="#" title="واتساپ">
-                  <FaWhatsapp className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                  <FaWhatsapp className="text-3xl cursor-pointer hover:text-black hover:translate-x-1 duration-300" />
                 </a>
                 <a href="#" title="یوتیوب">
-                  <FaYoutube className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                  <FaYoutube className="text-3xl cursor-pointer hover:text-black hover:translate-x-1 duration-300" />
                 </a>
                 <a href="#" title="تلگرام">
-                  <FaTelegram className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                  <FaTelegram className="text-3xl cursor-pointer hover:text-black hover:translate-x-1 duration-300" />
                 </a>
                 <a href="#" title="لینکدین">
-                  <FaLinkedin className="text-3xl cursor-pointer hover:text-primary hover:translate-x-1 duration-300" />
+                  <FaLinkedin className="text-3xl cursor-pointer hover:text-black hover:translate-x-1 duration-300" />
                 </a>
               </div>
               <div className="mt-6">
-                <div className="flex items-center gap-3 mt-6 hover:text-primary">
+                <div className="flex items-center gap-3 mt-6 hover:text-black">
                   <a
                     href="https://maps.app.goo.gl/giekZdwz6USbRNEN6"
                     target="_blank"
@@ -111,7 +111,7 @@ const Footer = () => {
                   {FooterRefs.map((link) => (
                     <li
                       key={link.id}
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-ga200 "
+                      className="cursor-pointer hover:text-black hover:translate-x-1 duration-300 text-ga200 "
                     >
                       <span>{link.title}</span>
                     </li>
@@ -127,7 +127,7 @@ const Footer = () => {
                 <ul>
                   {FooterLinks.map((select) => (
                     <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300  "
+                      className="cursor-pointer hover:text-black hover:translate-x-1 duration-300  "
                       key={select.id}
                     >
                       <a href={select.link}>{select.name}</a>
@@ -139,21 +139,21 @@ const Footer = () => {
             {/* social link  */}
           </div>
           <div className="py-8 px-4 text-right">
-            <h3 className="sm:text-3xl text-right font-bold text-xl  sm:text-right  mb-3  gap-3 hover:text-primary">
+            <h3 className="sm:text-3xl text-right font-bold text-xl  sm:text-right  mb-3  gap-3 hover:text-black">
               ویتوس
             </h3>
-            <h1 className="font-bold text-xl hover:text-primary ">
+            <h1 className="font-bold text-xl hover:text-black ">
               کیفیت و راحتی در یک تجربه
             </h1>
             <h2 className="pt-4">: دفتر مرکزی </h2>
-            <span className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300">
+            <span className="cursor-pointer hover:text-black hover:translate-x-1 duration-300">
               تهران - انتهای اتوبان نواب خیابان غلامرضایی بازار بورس کاشی و
               سرامیک زمزم پلاک 249
             </span>
             <h1 className="pt-2">: تلفن دفتر </h1>
             <a
               href="tel:02155840416 "
-              className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300"
+              className="cursor-pointer hover:text-black hover:translate-x-1 duration-300"
             >
               02155840416
             </a>

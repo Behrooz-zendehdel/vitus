@@ -21,7 +21,7 @@ const Navbar = () => {
             <div>
               <Link
                 to="/"
-                className="font-bold text-2xl sm:text-3xl flex gap-2 hover:text-primary"
+                className="font-bold text-2xl sm:text-3xl flex gap-2 hover:text-black"
               >
                 ویتوس
               </Link>

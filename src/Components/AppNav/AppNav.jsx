@@ -60,7 +60,7 @@ function AppNav() {
               {Dropdownlinks.map((datas) => (
                 <li key={datas.id}>
                   <Link
-                    className="inline-block w-full text-sm text-center rounded-md p-2  hover:text-primary "
+                    className="inline-block w-full text-sm text-center rounded-md p-2 hover:text-black "
                     to={datas.link}
                   >
                     {datas.name}

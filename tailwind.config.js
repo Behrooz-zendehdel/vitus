@@ -6,7 +6,8 @@ export default {
     extend: {
       colors: {
         primary: "#4834d4",
-        secondary: "#111827",
+        secondary: "#6b21a8",
+        black: "#000",
       },
       container: {
         center: true,
@@ -19,3 +20,5 @@ export default {
   },
   plugins: [],
 };
+
+// #6b21a8

@@ -82,7 +82,7 @@ function SocialNav() {
                   href={data.link}
                   target="blank"
                   title={data.title}
-                  className=" hover:text-primary hover:translate-x-3 duration-300"
+                  className=" hover:text-black hover:translate-x-3 duration-300"
                 >
                   {data.icon}
                 </a>
@@ -91,11 +91,11 @@ function SocialNav() {
           </ul>
         </div>
         <div className="flex justify-between  items-center pt-2">
-          <a className="mr-2 hover:text-primary  " href="tel:09129474604">
+          <a className="mr-2 hover:text-black  " href="tel:09129474604">
             09129474604
           </a>
           <FaPhone className="size-5 mr-2" />
-          <a className="mr-2 hover:text-primary " href="tel:02155840416">
+          <a className="mr-2 hover:text-black " href="tel:02155840416">
             02155840416
           </a>
           <FaMobileRetro className="size-5" />
