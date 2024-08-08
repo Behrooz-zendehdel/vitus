@@ -116,7 +116,7 @@ function ProductHose() {
           {ProductsData.map((data) => (
             <div
               className="rounded-xl bg-white dark:bg-gary-800  
-              relative shadow-xl duration-300 group w-[240px] hover:bg-secondary hover:text-white
+              relative shadow-xl duration-300 group w-[240px] hover:bg-gray-200 hover:text-black
           "
               key={data.id}
             >
