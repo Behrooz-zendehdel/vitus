@@ -64,7 +64,7 @@ const Footer = () => {
   return (
     <div className=" w-full dark:bg-secondary dark:text-white text-black ">
       <div data-aos="zoom-in" className="container ">
-        <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-10 pt-5 ">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 pb-10 pt-24">
           {/* company details  */}
 
           {/* footer links */}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import ariachrome from "../../assets/imageProducts/ariachrome/ariachrome-def.png";
@@ -132,6 +132,7 @@ const ProductImage = [
 ];
 
 const Products = () => {
+  const [hidden, SetHidden] = useState(true);
   return (
     <div id="products" className="mt-14 mb-12 ">
       <div>
@@ -156,7 +157,10 @@ const Products = () => {
                   className="product-card sm:w-[200px] md:w-[200px] hover:bg-gray-200 hover:rounded-xl"
                 >
                   <Link to={product.link}>
-                    <img src={product.image} alt={product.title} />
+                    <span className="p-2 text-center flex justify-center bg-secondary rounded-t-lg font-semibold text-white">
+                      {product.title}
+                    </span>
+                    <img className="" src={product.image} alt={product.title} />
                   </Link>
                 </div>
               ))}
