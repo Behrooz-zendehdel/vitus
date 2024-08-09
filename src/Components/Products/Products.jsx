@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 import ariachrome from "../../assets/imageProducts/ariachrome/ariachrome-def.png";
@@ -132,7 +132,6 @@ const ProductImage = [
 ];
 
 const Products = () => {
-  const [hidden, SetHidden] = useState(true);
   return (
     <div id="products" className="mt-14 mb-12 ">
       <div>
@@ -148,7 +147,7 @@ const Products = () => {
         </div>
         {/* body section  */}
         <div>
-          <div className="container ">
+          <div className="container  ">
             <div className="product-list grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8  grid-flow-dense ">
               {ProductImage.map((product) => (
                 <div
