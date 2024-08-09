@@ -92,7 +92,7 @@ function SocialNav() {
         </div>
         <div className="flex justify-between  items-center pt-2">
           <a className="mr-2 hover:text-black  " href="tel:09129474604">
-            09129474604
+            09129628596
           </a>
           <FaPhone className="size-5 mr-2" />
           <a className="mr-2 hover:text-black " href="tel:02155840416">

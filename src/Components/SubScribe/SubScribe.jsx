@@ -21,8 +21,12 @@ const SubScribe = () => {
           <h1 className="text-2xl text-center sm:text-left sm:text-xl font-semibold ">
             جهت اخذ نمایندگی در سراسر ایران با شماره زیر تماس حاصل فرمایید
           </h1>
-          <a href="tel:09129474604" data-aos="fade-up" className=" font-num  cursor-pointer hover:text-black ">
-            09129474604
+          <a
+            href="tel:09129474604"
+            data-aos="fade-up"
+            className=" font-num  cursor-pointer hover:text-black "
+          >
+            09129628596
           </a>
         </div>
       </div>
