@@ -38,6 +38,12 @@ import antikgold11 from "../../assets/imageProducts/antikgold/antikgold11.png";
 import antikgold22 from "../../assets/imageProducts/antikgold/antikgold22.png";
 import antikgold44 from "../../assets/imageProducts/antikgold/antikgold44.png";
 import antikgold55 from "../../assets/imageProducts/antikgold/antikgold55.png";
+// ----------------------
+import antikmeshkigold11 from "../../assets/imageProducts/antikmeshkigold/antikmeshkigold11.png";
+import antikmeshkigold22 from "../../assets/imageProducts/antikmeshkigold/antikmeshkigold22.png";
+import antikmeshkigold33 from "../../assets/imageProducts/antikmeshkigold/antikmeshkigold33.png";
+import antikmeshkigold44 from "../../assets/imageProducts/antikmeshkigold/antikmeshkigold44.png";
+import antikmeshkigold55 from "../../assets/imageProducts/antikmeshkigold/antikmeshkigold55.png";
 const ProductImage = [
   {
     id: 1,
@@ -83,6 +89,21 @@ const ProductImage = [
     id: 4,
     images: [antikgold11, antikgold22, antikgold44, antikgold55],
     title: "آنتیک طلایی ",
+    desc1: "قیمت اقتصادی ",
+    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
+    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
+    desc4: "یکسال بیمه محصول حتی پس از استفاده ",
+  },
+  {
+    id: 5,
+    images: [
+      antikmeshkigold11,
+      antikmeshkigold22,
+      antikmeshkigold33,
+      antikmeshkigold44,
+      antikmeshkigold55,
+    ],
+    title: "آنتیک مشکی طلایی ",
     desc1: "قیمت اقتصادی ",
     desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
     desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",

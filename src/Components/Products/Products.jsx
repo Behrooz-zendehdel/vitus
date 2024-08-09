@@ -147,6 +147,7 @@ const Products = () => {
         </div>
         {/* body section  */}
         <div>
+          
           <div className="container  ">
             <div className="product-list grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8  grid-flow-dense ">
               {ProductImage.map((product) => (
