@@ -33,7 +33,11 @@ import amazonchrome11 from "../../assets/imageProducts/amazonchrome/amazonchrom1
 import amazonchrome22 from "../../assets/imageProducts/amazonchrome/amazonchrom22.png";
 import amazonchrome33 from "../../assets/imageProducts/amazonchrome/amazonchrom33.png";
 import amazonchrome44 from "../../assets/imageProducts/amazonchrome/amazonchrom44.png";
-
+// -----------------------------------------
+import antikgold11 from "../../assets/imageProducts/antikgold/antikgold11.png";
+import antikgold22 from "../../assets/imageProducts/antikgold/antikgold22.png";
+import antikgold44 from "../../assets/imageProducts/antikgold/antikgold44.png";
+import antikgold55 from "../../assets/imageProducts/antikgold/antikgold55.png";
 const ProductImage = [
   {
     id: 1,
@@ -70,6 +74,15 @@ const ProductImage = [
       antikchrome5,
     ],
     title: "آنتیک کروم ",
+    desc1: "قیمت اقتصادی ",
+    desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
+    desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
+    desc4: "یکسال بیمه محصول حتی پس از استفاده ",
+  },
+  {
+    id: 4,
+    images: [antikgold11, antikgold22, antikgold44, antikgold55],
+    title: "آنتیک طلایی ",
     desc1: "قیمت اقتصادی ",
     desc2: "سردوش تمام ای بی اس با اتصال 20 عدد پیچ آلومینیومی",
     desc3: "استقاده از نازل های یک تیکه جهت سهولت در تمیز کردن",
