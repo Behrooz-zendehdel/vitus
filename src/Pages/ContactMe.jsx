@@ -88,10 +88,15 @@ function ContactMe() {
                 </div>
               </div>
               <div className="item-download-catalog pt-4  md:text-xl sm:text-sm text-primary sm:font-bold">
-                <a href="#">لینک دانلود کاتالوگ</a>
+                <a href="../assets/Catalog/Showerset Vtous.pdf" download>
+                  لینک دانلود کاتالوگ
+                </a>
               </div>
               <div className="item-download-catalog pt-4 md:text-xl sm:text-sm text-primary sm:font-bold ">
-                <a href="#"> لینک دانلود لیست قیمت</a>
+                <a href="../assets/Catalog/catalog.zip" download>
+                  {" "}
+                  لینک دانلود لیست قیمت
+                </a>
               </div>
             </div>
           </div>
