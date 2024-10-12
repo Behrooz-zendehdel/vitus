@@ -99,12 +99,12 @@ function ContactMe() {
                 </a>
               </div>
               <div className="item-download-catalog pt-4  md:text-xl sm:text-sm text-primary sm:font-bold">
-                <a href="../assets/Catalog/productHose.pdf" download>
+                <a href="" download>
                   لینک دانلود کاتالوگ شلنگ توالت
                 </a>
               </div>
               <div className="item-download-catalog pt-4 md:text-xl sm:text-sm text-primary sm:font-bold ">
-                <a href="../assets/Catalog/catalog.zip" download>
+                <a href="../assets/Catalog/productHose.pdf" download>
                   {" "}
                   لینک دانلود لیست قیمت شلنگ توالت
                 </a>
