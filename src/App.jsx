@@ -12,6 +12,7 @@ import Agent from "./Pages/Agent";
 import Product from "./Components/Products/Product";
 import ProductHose from "./Components/ProductHose/ProductHose";
 import { ToastContainer } from "react-toastify";
+import Representation from "./Pages/Representation";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/contactme" element={<ContactMe />} />
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/agent" element={<Agent />} />
+        <Route path="/Representation" element={<Representation />} />
       </Routes>
     </BrowserRouter>
   );

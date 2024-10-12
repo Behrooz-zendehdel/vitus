@@ -88,14 +88,25 @@ function ContactMe() {
                 </div>
               </div>
               <div className="item-download-catalog pt-4  md:text-xl sm:text-sm text-primary sm:font-bold">
-                <a href="../assets/Catalog/Showerset Vtous.pdf" download>
-                  لینک دانلود کاتالوگ
+                <a href="../assets/Catalog/ShowersetVtous.pdf" download>
+                  لینک دانلود کاتالوگ علم دوش
                 </a>
               </div>
               <div className="item-download-catalog pt-4 md:text-xl sm:text-sm text-primary sm:font-bold ">
                 <a href="../assets/Catalog/catalog.zip" download>
                   {" "}
-                  لینک دانلود لیست قیمت
+                  لینک دانلود لیست قیمت علم دوش
+                </a>
+              </div>
+              <div className="item-download-catalog pt-4  md:text-xl sm:text-sm text-primary sm:font-bold">
+                <a href="../assets/Catalog/productHose.pdf" download>
+                  لینک دانلود کاتالوگ شلنگ توالت
+                </a>
+              </div>
+              <div className="item-download-catalog pt-4 md:text-xl sm:text-sm text-primary sm:font-bold ">
+                <a href="../assets/Catalog/catalog.zip" download>
+                  {" "}
+                  لینک دانلود لیست قیمت شلنگ توالت
                 </a>
               </div>
             </div>

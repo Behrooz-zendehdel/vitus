@@ -31,6 +31,11 @@ const Dropdownlinks = [
     name: "شرایط دریافت نمایندگی",
     link: "/agent",
   },
+  {
+    id: 2,
+    name: "لیست نمایندگی های مجاز",
+    link: "/Representation",
+  },
 ];
 function AppNav() {
   return (
@@ -55,12 +60,12 @@ function AppNav() {
             </span>
             دریافت نمایندگی{" "}
           </a>
-          <div className=" absolute shadow-md z-[9999] hidden group-hover:block w-[170px] rounded-md bg-white p-2 text-black">
+          <div className=" absolute shadow-md z-[9999] hidden group-hover:block w-[210px] rounded-md bg-white p-2 text-black">
             <ul className="">
               {Dropdownlinks.map((datas) => (
-                <li key={datas.id}>
+                <li className="" key={datas.id}>
                   <Link
-                    className="inline-block w-full text-sm text-center rounded-md p-2 hover:text-black "
+                    className="inline-block w-[200px] text-bold  text-center rounded-md p-2 hover:text-primary "
                     to={datas.link}
                   >
                     {datas.name}
