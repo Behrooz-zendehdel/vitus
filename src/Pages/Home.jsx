@@ -81,16 +81,6 @@ const Home = () => {
                   <span className="text-purple-200 text-sm font-medium">برترین برند ایران</span>
                 </div>
 
-                {/* Promotional Slogan */}
-                <div className="mb-6">
-                  <h2 className="text-lg lg:text-xl text-purple-200 font-medium mb-2">
-                    علم دوش‌های مدرن، تجربه‌ای متفاوت
-                  </h2>
-                  <p className="text-sm lg:text-base text-gray-300">
-                    با کیفیت برتر، قیمت مناسب و ارسال رایگان به سراسر ایران
-                  </p>
-                </div>
-
                 {/* Main Title - Smaller */}
                 <div className="space-y-4">
                   <h1 className="text-2xl lg:text-4xl font-black mb-4 leading-tight">
