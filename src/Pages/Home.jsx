@@ -10,19 +10,18 @@ import "aos/dist/aos.css";
 import { FcCheckmark } from "react-icons/fc";
 import { FaStar, FaShieldAlt, FaTruck, FaHeadset, FaArrowRight, FaPlay } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import img1 from '../assets/Hero/anik-sefid-tala.png';
+import img2 from '../assets/Hero/antik-sefid-chrome-2.png';
+import img3 from '../assets/Hero/daria-rosobgir-3.png';
+import img4 from '../assets/Hero/zangole-tala-4.png';
+import img5 from '../assets/Hero/anik-sefid-tala-1.png';
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const location = useLocation();
   
   // Array of hero images
-  const heroImages = [
-    "/src/assets/Hero/anik-sefid-tala.png",
-    "/src/assets/Hero/antik-sefid-chrome-2.png",
-    "/src/assets/Hero/daria-rosobgir-3.png",
-    "/src/assets/Hero/zangole-tala-4.png",
-    "/src/assets/Hero/anik-sefid-tala-1.png"
-  ];
+  const heroImages = [img1, img2, img3, img4, img5];
 
   // Change image every 5 seconds
   useEffect(() => {
