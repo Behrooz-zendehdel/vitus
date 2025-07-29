@@ -9,9 +9,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FcCheckmark } from "react-icons/fc";
 import { FaStar, FaShieldAlt, FaTruck, FaHeadset, FaArrowRight, FaPlay } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const location = useLocation();
   
   // Array of hero images
   const heroImages = [
@@ -38,6 +40,18 @@ const Home = () => {
       once: true,
     });
   }, []);
+
+  React.useEffect(() => {
+    if (location.state && location.state.scrollTo) {
+      const sectionId = location.state.scrollTo;
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // کمی تاخیر برای رندر کامل
+    }
+  }, [location.state]);
 
   return (
     <Layout>
@@ -68,9 +82,19 @@ const Home = () => {
                   <span className="text-purple-200 text-sm font-medium">برترین برند ایران</span>
                 </div>
 
+                {/* Promotional Slogan */}
+                <div className="mb-6">
+                  <h2 className="text-lg lg:text-xl text-purple-200 font-medium mb-2">
+                    علم دوش‌های مدرن، تجربه‌ای متفاوت
+                  </h2>
+                  <p className="text-sm lg:text-base text-gray-300">
+                    با کیفیت برتر، قیمت مناسب و ارسال رایگان به سراسر ایران
+                  </p>
+                </div>
+
                 {/* Main Title - Smaller */}
                 <div className="space-y-4">
-                  <h1 className="text-4xl lg:text-6xl font-black mb-4 leading-tight">
+                  <h1 className="text-2xl lg:text-4xl font-black mb-4 leading-tight">
                     <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
                       علم دوش‌های
                     </span>
@@ -118,15 +142,17 @@ const Home = () => {
                 </div>
 
                 {/* CTA Buttons - Smaller */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <button className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl text-base font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
+                <div className="flex justify-center lg:justify-start">
+                  <button 
+                    onClick={() => {
+                      document.getElementById('top-products')?.scrollIntoView({ 
+                        behavior: 'smooth' 
+                      });
+                    }}
+                    className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl text-base font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
+                  >
                     <span>مشاهده محصولات</span>
                     <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
-                  
-                  <button className="group bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-xl text-base font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                    <FaPlay className="text-sm" />
-                    <span>مشاهده ویدیو</span>
                   </button>
                 </div>
               </div>
@@ -178,27 +204,27 @@ const Home = () => {
         </section>
 
         {/* Services Special */}
-        <div className="w-full">
+        <div className="w-full" id="services">
           <Banner />
         </div>
 
         {/* Top Products */}
-        <div className="w-full">
+        <div className="w-full" id="top-products">
           <TopProducts />
         </div>
 
         {/* Product Hose - After Top Products */}
-        <div className="w-full">
+        <div className="w-full" id="product-hose">
           <ProductHose />
         </div>
 
         {/* Agent Section */}
-        <div className="w-full">
+        <div className="w-full" id="agent-section">
           <AgentSection />
         </div>
 
         {/* Testimonials */}
-        <div className="w-full">
+        <div className="w-full" id="testimonials">
           <TestImonials />
         </div>
       </main>
