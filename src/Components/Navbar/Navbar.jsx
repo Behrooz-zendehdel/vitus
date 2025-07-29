@@ -1,88 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import AppNav from "../AppNav/AppNav";
-import SocialNav from "../SocialNav/SocialNav";
-import DarkMode from "./DarkMode";
+import Button from "./Button";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <>
-      <SocialNav />
-      <div className="shadow-md  dark:bg-secondary dark:text-white duration-200 relative z-40">
-        {/* upper Navbar */}
-        <div className="py-2">
-          <div className="container flex justify-between items-center">
-            <div>
-              <Link
-                to="/"
-                className="font-bold text-2xl sm:text-3xl flex gap-2 hover:text-black"
-              >
-                ویتوس
-              </Link>
-            </div>
-            {/* Mobile toggle button */}
-            <div className="flex items-center sm:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-600 dark:text-gray-300 focus:outline-none"
-              >
-                {!isOpen ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div>
-            {/* search bar and order button */}
-            <div className="hidden sm:flex justify-between items-center gap-4">
-              {/* DarkMode switch */}
-              <DarkMode />
-            </div>
+    <nav className="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-md bg-white/90">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <img src="/src/assets/logo.png" alt="Vitus Logo" className="h-12 w-auto" />
+            <span className="text-2xl font-bold text-gray-800">ویتوس</span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              خانه
+            </Link>
+            <Link to="/topproducts" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              محصولات برتر
+            </Link>
+            <Link to="/producthose" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              شلنگ دوش
+            </Link>
+            <Link to="/banner" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              بنر
+            </Link>
+            <Link to="/subscribe" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              تماس
+            </Link>
+            <Link to="/aboutme" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              درباره ما
+            </Link>
           </div>
-        </div>
-        {/* lower Navbar */}
-        {isOpen && (
-          <div className="sm:hidden">
-            <AppNav />
+
+          {/* Right Side */}
+          <div className="flex items-center space-x-4">
+            <Button />
           </div>
-        )}
-        <div className="hidden sm:block">
-          <AppNav />
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

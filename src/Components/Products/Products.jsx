@@ -1,175 +1,203 @@
 import React from "react";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
-import ariachrome from "../../assets/imageProducts/ariachrome/ariachrome-def.png";
-import amazongold from "../../assets/imageProducts/amazongold/amazongold-def.png";
-import antikchrome from "../../assets/imageProducts/antikchrome/antikchrome-def.png";
-import khorshidchrome from "../../assets/imageProducts/khorshidchrome/khorshidchrome-def.png";
-import zangolegold from "../../assets/imageProducts/zangolegold/zangolegold-def.png";
-import homavip from "../../assets/imageProducts/homa/homavip-def.png";
-import antikgold from "../../assets/imageProducts/antikgold/antikgold-def.png";
-import antikmeshkigold from "../../assets/imageProducts/antikmeshkigold/antikmeshkigold-def.png";
-import antikmeshkichrome from "../../assets/imageProducts/antikmeshkichrome/antikmeshkichrome-def.png";
-import antiksefid from "../../assets/imageProducts/antiksefid/antiksefid-def.png";
-import antiksefidgold from "../../assets/imageProducts/antiksefidgold/antiksefidgold-def.png";
-import antiksefidchrome from "../../assets/imageProducts/aniksefidchrome/antiksefidchrome-def.png";
-import ariagold from "../../assets/imageProducts/ariagold/ariagold-def.png";
-import sadafchrome from "../../assets/imageProducts/sadafchrome/sadafchrome-def.png";
-import dariarosobgir from "../../assets/imageProducts/dariarosobgir/dariarosobgir-def.png";
-import zangolechrome from "../../assets/imageProducts/zangolechrome/zangolechrome-def.png";
-import zangolesefidgole from "../../assets/imageProducts/zangolesefidgold/zangolesefidgold-def.png";
-import amazonchrome from "../../assets/imageProducts/amazonchrome/amazonchrome-def.png";
-const ProductImage = [
+const products = [
   {
     id: 1,
-    image: ariachrome,
-    title: "آریا کروم ",
-    link: "product/1",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 1",
+    titleEn: "Product 1",
+    descFa: "توضیحات محصول 1 به فارسی",
+    descEn: "Product 1 description in English",
+    phone: "021-12345678",
+    whatsapp: "9123456789",
   },
   {
     id: 2,
-    image: amazongold,
-    title: "آمازون طلایی",
-    link: "product/2",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 2",
+    titleEn: "Product 2",
+    descFa: "توضیحات محصول 2 به فارسی",
+    descEn: "Product 2 description in English",
+    phone: "021-87654321",
+    whatsapp: "9876543210",
   },
   {
     id: 3,
-    image: antikchrome,
-    title: "آنیتک کروم",
-    link: "product/3",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 3",
+    titleEn: "Product 3",
+    descFa: "توضیحات محصول 3 به فارسی",
+    descEn: "Product 3 description in English",
+    phone: "021-11223344",
+    whatsapp: "9988776655",
   },
-
   {
     id: 4,
-    image: antikgold,
-    title: "آنیتک طلایی",
-    link: "product/4",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 4",
+    titleEn: "Product 4",
+    descFa: "توضیحات محصول 4 به فارسی",
+    descEn: "Product 4 description in English",
+    phone: "021-55667788",
+    whatsapp: "9112233445",
   },
   {
     id: 5,
-    image: antikmeshkigold,
-    title: " آنیتک  مشکی طلایی",
-    link: "product/5",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 5",
+    titleEn: "Product 5",
+    descFa: "توضیحات محصول 5 به فارسی",
+    descEn: "Product 5 description in English",
+    phone: "021-99001122",
+    whatsapp: "9223344556",
   },
   {
     id: 6,
-    image: antikmeshkichrome,
-    title: " آنیتک  مشکی کروم",
-    link: "product/6",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 6",
+    titleEn: "Product 6",
+    descFa: "توضیحات محصول 6 به فارسی",
+    descEn: "Product 6 description in English",
+    phone: "021-33445566",
+    whatsapp: "9334455667",
   },
   {
     id: 7,
-    image: antiksefid,
-    title: " آنیتک  سفید",
-    link: "product/7",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 7",
+    titleEn: "Product 7",
+    descFa: "توضیحات محصول 7 به فارسی",
+    descEn: "Product 7 description in English",
+    phone: "021-77889900",
+    whatsapp: "9445566778",
   },
   {
     id: 8,
-    image: antiksefidchrome,
-    title: "   آنیتک  سفید کروم",
-    link: "product/8",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 8",
+    titleEn: "Product 8",
+    descFa: "توضیحات محصول 8 به فارسی",
+    descEn: "Product 8 description in English",
+    phone: "021-12345678",
+    whatsapp: "9556677889",
   },
   {
     id: 9,
-    image: antiksefidgold,
-    title: "   آنیتک  سفید طلایی",
-    link: "product/9",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 9",
+    titleEn: "Product 9",
+    descFa: "توضیحات محصول 9 به فارسی",
+    descEn: "Product 9 description in English",
+    phone: "021-87654321",
+    whatsapp: "9667788990",
   },
   {
     id: 10,
-    image: ariagold,
-    title: "آریا طلایی",
-    link: "product/10",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 10",
+    titleEn: "Product 10",
+    descFa: "توضیحات محصول 10 به فارسی",
+    descEn: "Product 10 description in English",
+    phone: "021-11223344",
+    whatsapp: "9778899001",
   },
   {
     id: 11,
-    image: dariarosobgir,
-    title: "دریا رسوب گیر",
-    link: "product/11",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 11",
+    titleEn: "Product 11",
+    descFa: "توضیحات محصول 11 به فارسی",
+    descEn: "Product 11 description in English",
+    phone: "021-55667788",
+    whatsapp: "9889900112",
   },
   {
     id: 12,
-    image: homavip,
-    title: "هما وی ای پی ",
-    link: "product/12",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 12",
+    titleEn: "Product 12",
+    descFa: "توضیحات محصول 12 به فارسی",
+    descEn: "Product 12 description in English",
+    phone: "021-99001122",
+    whatsapp: "9990011223",
   },
   {
     id: 13,
-    image: khorshidchrome,
-    title: "خورشید کروم   ",
-    link: "product/13",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 13",
+    titleEn: "Product 13",
+    descFa: "توضیحات محصول 13 به فارسی",
+    descEn: "Product 13 description in English",
+    phone: "021-33445566",
+    whatsapp: "9112233445",
   },
   {
     id: 14,
-    image: sadafchrome,
-    title: "صدف کروم   ",
-    link: "product/14",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 14",
+    titleEn: "Product 14",
+    descFa: "توضیحات محصول 14 به فارسی",
+    descEn: "Product 14 description in English",
+    phone: "021-77889900",
+    whatsapp: "9223344556",
   },
   {
     id: 15,
-    image: zangolechrome,
-    title: "زنگوله  کروم   ",
-    link: "product/15",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 15",
+    titleEn: "Product 15",
+    descFa: "توضیحات محصول 15 به فارسی",
+    descEn: "Product 15 description in English",
+    phone: "021-12345678",
+    whatsapp: "9334455667",
   },
   {
     id: 16,
-    image: zangolegold,
-    title: "زنگوله  طلایی   ",
-    link: "product/16",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 16",
+    titleEn: "Product 16",
+    descFa: "توضیحات محصول 16 به فارسی",
+    descEn: "Product 16 description in English",
+    phone: "021-87654321",
+    whatsapp: "9445566778",
   },
   {
     id: 17,
-    image: zangolesefidgole,
-    title: "زنگوله  سفید طلایی   ",
-    link: "product/17",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 17",
+    titleEn: "Product 17",
+    descFa: "توضیحات محصول 17 به فارسی",
+    descEn: "Product 17 description in English",
+    phone: "021-11223344",
+    whatsapp: "9556677889",
   },
   {
     id: 18,
-    image: amazonchrome,
-    title: "  آمازون کروم    ",
-    link: "product/18",
+    img: "https://via.placeholder.com/150",
+    titleFa: "محصول 18",
+    titleEn: "Product 18",
+    descFa: "توضیحات محصول 18 به فارسی",
+    descEn: "Product 18 description in English",
+    phone: "021-55667788",
+    whatsapp: "9667788990",
   },
 ];
 
-const Products = () => {
-  return (
-    <div id="products" className="mt-14 mb-12 ">
-      <div>
-        <div className="text-center mb-10 max-w-[600px] mx-auto ">
-          <p data-aos="fade-up" className="text-sm text-primary">
-            {" "}
-            پرفروش ترین محصولات
-          </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
-            علم دوش های دوکاره
-          </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400 mt-2"></p>
-        </div>
-        {/* body section  */}
-        <div>
-          
-          <div className="container  ">
-            <div className="product-list grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8  grid-flow-dense ">
-              {ProductImage.map((product) => (
-                <div
-                  key={product.id}
-                  data-aos="zoom-in"
-                  className="product-card sm:w-[200px] md:w-[200px] hover:bg-gray-200 hover:rounded-xl"
-                >
-                  <Link to={product.link}>
-                    <span className="p-2 text-center flex justify-center bg-secondary rounded-t-lg font-semibold text-white">
-                      {product.title}
-                    </span>
-                    <img className="" src={product.image} alt={product.title} />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
+const Products = ({ lang }) => (
+  <section className="container mx-auto py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    {products.map(product => (
+      <div key={product.id} className="card flex flex-col items-center justify-between text-center">
+        <img src={product.img} alt={product.title} className="w-32 h-32 object-contain mb-4" />
+        <h2 className="font-bold text-lg mb-2">{lang === 'fa' ? product.titleFa : product.titleEn}</h2>
+        <p className="text-gray-500 mb-4">{lang === 'fa' ? product.descFa : product.descEn}</p>
+        <div className="flex gap-4 justify-center">
+          <a href={`tel:${product.phone}`} className="text-primary text-xl" title="تماس"><FaPhoneAlt /></a>
+          <a href={`https://wa.me/${product.whatsapp}`} className="text-primary text-xl" title="واتساپ"><FaWhatsapp /></a>
         </div>
       </div>
-    </div>
-  );
-};
+    ))}
+  </section>
+);
 
 export default Products;
